@@ -112,26 +112,27 @@ todayBtn.addEventListener("click", () => {
   // 달력 다시 렌더링
   renderCalendar();
 });
-// 여기 주석 해제하면 출석 체크 가능해짐
-// // 출석 표시 함수
-// function markAttendance(day) {
-//   const currentDate = new Date();
-//   const clickedDate = new Date(currentYear, currentMonth, day);
 
-//   // 클릭한 날짜가 오늘인지 확인 
-//   // 로컬스토리지 내장객체를 사용함
-//   if (currentDate.getDate() === day && currentDate.getMonth() === currentMonth && currentDate.getFullYear() === currentYear) {
-//     let attendanceStatus = localStorage.getItem(`${currentYear}-${currentMonth + 1}-${day}`);
-//     if (!attendanceStatus) {
-//       localStorage.setItem(`${currentYear}-${currentMonth + 1}-${day}`, "✓");
-//     } else {
-//       alert("이미 완료된 출석입니다.");
-//     }
-//     renderCalendar(); // 출석 표시 후 달력 렌더링
-//   } else {
-//     alert("오늘만 출석을 표시할 수 있습니다.");
-//   }
-// }
+// 여기 주석 해제하면 출석 체크 가능해짐
+// 출석 표시 함수
+function markAttendance(day) {
+  const currentDate = new Date();
+  const clickedDate = new Date(currentYear, currentMonth, day);
+
+  // 클릭한 날짜가 오늘인지 확인 
+  // 로컬스토리지 내장객체를 사용함
+  if (currentDate.getDate() === day && currentDate.getMonth() === currentMonth && currentDate.getFullYear() === currentYear) {
+    let attendanceStatus = localStorage.getItem(`${currentYear}-${currentMonth + 1}-${day}`);
+    if (!attendanceStatus) {
+      localStorage.setItem(`${currentYear}-${currentMonth + 1}-${day}`, "✓");
+    } else {
+      alert("이미 완료된 출석입니다.");
+    }
+    renderCalendar(); // 출석 표시 후 달력 렌더링
+  } else {
+    alert("오늘만 출석을 표시할 수 있습니다.");
+  }
+}
 
 
 // 현재 월이면 오늘 버튼 숨기기
