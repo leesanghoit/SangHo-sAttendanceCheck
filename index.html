@@ -1,61 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="ko">
 
-    <!-- STYLESHEET -->
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FONTAWESOME -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <title>Mini Calendar</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="calendar">
-        <div class="header">
-          <div class="month"></div>
-          <div class="btns">
-            <div class="btn today-btn">
-              <i class="fas fa-calendar-day"></i>
-            </div>
-            <div class="btn prev-btn">
-              <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="btn next-btn">
-              <i class="fas fa-chevron-right"></i>
-            </div>
+  <!-- 스타일 시트 -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>Likelion 캘린더</title>
+</head>
+
+<body>
+  <div class="header">
+    <h1>멋쟁이사자 출석체크</h1>
+  </div>
+  <div class="container">
+    <div class="calendar">
+      <div class="header">
+        <div class="month"></div>
+        <div class="btns">
+          <div class="btn today-btn">
+            <i class="fas fa-calendar-day"></i>
+          </div>
+          <div class="btn prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="btn next-btn">
+            <i class="fas fa-chevron-right"></i>
           </div>
         </div>
-        <div class="weekdays">
-          <div class="day">Sun</div>
-          <div class="day">Mon</div>
-          <div class="day">Tue</div>
-          <div class="day">Wed</div>
-          <div class="day">Thu</div>
-          <div class="day">Fri</div>
-          <div class="day">Sat</div>
-        </div>
-        <div class="days">
-          <!-- lets add days using js -->
-        </div>
+      </div>
+      <div class="weekdays">
+        <div class="day">일</div>
+        <div class="day">월</div>
+        <div class="day">화</div>
+        <div class="day">수</div>
+        <div class="day">목</div>
+        <div class="day">금</div>
+        <div class="day">토</div>
+      </div>
+      <div class="days">
+        <!-- 자바스크립트를 사용하여 날짜 추가 -->
       </div>
     </div>
+  </div>
 
-    <!-- Credits -->
-    <div class="credits">
-      <a href="https://www.youtube.com/channel/UCiUtBDVaSmMGKxg1HYeK-BQ">
-        Created with <span><i class="fas fa-heart"></i></span> by
-        <span>Open Source Coding</span>
-      </a>
-    </div>
+  <!-- 자바스크립트 -->
+  <script src="script.js"></script>
+</body>
 
-    <!-- SCRIPT -->
-    <script src="script.js"></script>
-  </body>
 </html>
